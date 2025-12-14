@@ -5,7 +5,7 @@ from util.tokens_ import create_access_token, create_refresh_token
 from util.hash_ import get_password_hash, verify_password
 from util.authorization_ import get_current_user
 from util.auth_settings_ import settings, oauth2_scheme
-from db.rules import add, get, update, delete
+from db.rules import add, get, get_all, update, delete
 from fastapi import APIRouter, Depends
 from google.auth.transport import requests as google_auth_requests
 from google.oauth2 import id_token
@@ -329,3 +329,19 @@ async def get_current_user_info(user_id: str = Depends(get_current_user)):
     except Exception as e:
         print(f"Me Endpoint Error: {e}")
         return {'status_code': 500, 'message': 'Error fetching user info.'}
+
+@router.get('/all_user_types')
+async def get_all_user_types(user_id: str = Depends(get_current_user)):
+    try:
+        if user_id is None:
+            return {'status_code': 401, 'message': 'Invalid token.'}
+        
+        email = get({'_id': ObjectId(user_id)}, 'PERM_USERS', 'USERS')['email']
+        accounts = get_all({'email': email}, 'PERM_USERS', 'USERS')
+        user_types = []
+        for account in accounts:
+            user_types.append(account['user_type'])
+        return {'status_code': 200, 'message': 'User types fetched successfully', 'user_types': user_types}
+    except Exception as e:
+        print(f"All User Types Error: {e}")
+        return {'status_code': 500, 'message': 'Error fetching user types.'}

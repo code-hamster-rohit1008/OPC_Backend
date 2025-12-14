@@ -45,7 +45,7 @@ async def otp_format_signin(user_name, otp):
                                     </p>
                                     
                                     <p style="margin: 0 0 15px 0; font-size: 14px; color: #666; line-height: 1.5;">
-                                        If this was not you, please <a href="#" style="color: #d4af37; text-decoration: underline;">reset your password</a> immediately.
+                                        If this was not you, please <a href="http://127.0.0.1:5500/sign-in.html" style="color: #d4af37; text-decoration: underline;">reset your password</a> immediately.
                                     </p>
                                     
                                     <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">

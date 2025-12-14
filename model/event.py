@@ -8,5 +8,6 @@ class EventInfo(BaseModel):
     end_date: datetime.datetime
     organizer: str
     location: str
+    poc_email: str
     poc_name: str
     poc_phone: int
