@@ -27,8 +27,10 @@ async def get_meeting_timings(date: str):
 async def schedule_meet(request: Meet, background_tasks: BackgroundTasks):
     try:
         service = await get_calendar_service()
+        # print(service)
         if service:
             start_dt, end_dt = await combine_date_time(request.date, request.time_slot)
+            # return {'status_code': 200, 'start_dt': start_dt, 'end_dt': end_dt}
             if not start_dt or not end_dt:
                 return {'status_code': 400, 'message': 'Invalid date or time format.'}
             attendee_list = [{'email': p.strip()} for p in request.emails.split(',') if p.strip()]
@@ -93,4 +95,5 @@ async def schedule_meet(request: Meet, background_tasks: BackgroundTasks):
         else:
             return {'status_code': 500, 'message': 'Failed to schedule meeting, please try again later.'}
     except Exception as e:
-        return {'status_code': 500, 'message': f'An error occurred, please try again later.'}
+        # return {'status_code': 500, 'message': f'An error occurred, please try again later.'}
+        return {'status_code': 500, 'message': str(e)}

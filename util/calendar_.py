@@ -3,6 +3,7 @@ from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 from datetime import datetime
 import os, json
+from fastapi import HTTPException
 
 TOKEN_STRING = os.getenv("GOOGLE_CALENDAR_TOKEN", "")
 SCOPES = [os.getenv("GOOGLE_API_SCOPES", "https://www.googleapis.com/auth/calendar")]
@@ -21,7 +22,7 @@ async def get_calendar_service():
             try:
                 creds.refresh(Request())
                 os.environ["GOOGLE_CALENDAR_TOKEN"] = creds.to_json()
-            except Exception:
+            except Exception as e:
                 return None
         else:
             return None

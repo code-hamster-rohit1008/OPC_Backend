@@ -45,7 +45,7 @@ async def otp_format_signin(user_name, otp):
                                     </p>
                                     
                                     <p style="margin: 0 0 15px 0; font-size: 14px; color: #666; line-height: 1.5;">
-                                        If this was not you, please <a href="http://127.0.0.1:5500/sign-in.html" style="color: #d4af37; text-decoration: underline;">reset your password</a> immediately.
+                                        If this was not you, please <a href="https://www.theowncollab.com/sign-in.html" style="color: #d4af37; text-decoration: underline;">reset your password</a> immediately.
                                     </p>
                                     
                                     <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
@@ -58,7 +58,7 @@ async def otp_format_signin(user_name, otp):
                             <tr>
                                 <td style="background-color: #333333; padding: 20px; text-align: center; font-size: 12px; color: #bbbbbb;">
                                     <p style="margin: 0;">&copy; 2025 OPC. All rights reserved.</p>
-                                    <p style="margin: 5px 0 0 0;">Please do not reply to this automated message.</p>
+                                    <p style="margin: 5px 0 0 0;">In case of any issues, please contact us at <a href="mailto:opc.owncollab@gmail.com">opc.owncollab@gmail.com</a>.</p>
                                 </td>
                             </tr>
                         </table>
@@ -123,7 +123,7 @@ async def otp_format_signup(user_name, otp):
                             <tr>
                                 <td style="background-color: #333333; padding: 20px; text-align: center; font-size: 12px; color: #bbbbbb;">
                                     <p style="margin: 0;">&copy; 2025 OPC. All rights reserved.</p>
-                                    <p style="margin: 5px 0 0 0;">Please do not reply to this automated message.</p>
+                                    <p style="margin: 5px 0 0 0;">In case of any issues, please contact us at <a href="mailto:opc.owncollab@gmail.com">opc.owncollab@gmail.com</a>.</p>
                                 </td>
                             </tr>
                         </table>
@@ -182,7 +182,7 @@ async def signup_confirmation_email(user_name):
                             <tr>
                                 <td style="background-color: #333333; padding: 20px; text-align: center; font-size: 12px; color: #bbbbbb;">
                                     <p style="margin: 0;">&copy; 2025 OPC. All rights reserved.</p>
-                                    <p style="margin: 5px 0 0 0;">Please do not reply to this automated message.</p>
+                                    <p style="margin: 5px 0 0 0;">In case of any issues, please contact us at <a href="mailto:opc.owncollab@gmail.com">opc.owncollab@gmail.com</a>.</p>
                                 </td>
                             </tr>
                         </table>
@@ -244,7 +244,7 @@ async def password_reset_email(user_name, otp):
                             <tr>
                                 <td style="background-color: #333333; padding: 20px; text-align: center; font-size: 12px; color: #bbbbbb;">
                                     <p style="margin: 0;">&copy; 2025 OPC. All rights reserved.</p>
-                                    <p style="margin: 5px 0 0 0;">Please do not reply to this automated message.</p>
+                                    <p style="margin: 5px 0 0 0;">In case of any issues, please contact us at <a href="mailto:opc.owncollab@gmail.com">opc.owncollab@gmail.com</a>.</p>
                                 </td>
                             </tr>
                         </table>
@@ -302,7 +302,7 @@ async def register_event_email(event_name):
                             <tr>
                                 <td style="background-color: #333333; padding: 20px; text-align: center; font-size: 12px; color: #bbbbbb;">
                                     <p style="margin: 0;">&copy; 2025 OPC. All rights reserved.</p>
-                                    <p style="margin: 5px 0 0 0;">Please do not reply to this automated message.</p>
+                                    <p style="margin: 5px 0 0 0;">In case of any issues, please contact us at <a href="mailto:opc.owncollab@gmail.com">opc.owncollab@gmail.com</a>.</p>
                                 </td>
                             </tr>
                         </table>
